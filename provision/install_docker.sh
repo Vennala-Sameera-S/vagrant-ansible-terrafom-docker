@@ -24,7 +24,7 @@
 # # # --- Add official Docker repo ---
 # # sudo mkdir -p /usr/share/keyrings
 # # curl -fsSL --retry 5 --retry-delay 3 https://download.docker.com/linux/ubuntu/gpg \
-# #   | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+# #   | sudo gpg --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 # # echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
 # # https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
@@ -175,7 +175,7 @@ sudo apt-get install -y curl gnupg lsb-release ca-certificates software-properti
 # --- Add official Docker repo ---
 sudo mkdir -p /usr/share/keyrings
 curl -fsSL --retry 5 --retry-delay 3 https://download.docker.com/linux/ubuntu/gpg \
-  | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+  | sudo gpg --dearmor --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
 
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
 https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
